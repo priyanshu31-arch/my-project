@@ -26,9 +26,10 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
+      <div className="flex flex-wrap gap-5"> 
       {notes.length > 0 ? (
         notes.map((note) => (
-          <div key={note.id} style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}>
+          <div key={note.id} className='bg-blue-400 justify-center w-[350px] p-5 rounded-lg shadow-lg border flex  flex-wrap ' >
             <h2>{note.title}</h2>
             <p>{note.content}</p>
             <button onClick={() => deleteNote(note.id)}>Delete</button>
@@ -36,7 +37,7 @@ function Home() {
         ))
       ) : (
         <p>No notes available. Add some!</p>
-      )}
+      )}</div>
     </div>
   );
 }

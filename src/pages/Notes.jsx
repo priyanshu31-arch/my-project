@@ -18,10 +18,10 @@ function Note({ setNotes }) {
   };
 
   return (
-    <div>
-      <h1>Add a Note</h1>
+    <div className="justify-between m-24 border-spacing-1 bg-lime-300">
+      <h1 className="p-4 ml-56 underline">Add a Note</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="p+4 ml-36">
           <label>Title: </label>
           <input
             type="text"
@@ -30,15 +30,15 @@ function Note({ setNotes }) {
             required
           />
         </div>
-        <div>
+        <div className="p-4 ml-32">
           <label>Content: </label>
-          <textarea
+          <input
             value={content}
             onChange={(e) => setContent(e.target.value)}
             required
-          ></textarea>
+          ></input>
         </div>
-        <button type="submit">Add Note</button>
+        <button type="submit" className="m-7 border-spacing-1 p-1 bg-blue-300 ml-56">Add Note</button>
       </form>
     </div>
   );
